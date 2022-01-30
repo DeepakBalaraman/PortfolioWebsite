@@ -47,7 +47,7 @@ VANTA.WAVES({
   minHeight: 200.00,
   minWidth: 200.00,
   scale: 0.65,
-  scaleMobile: 0.65,
+  scaleMobile: 2.0,
   color: 0x003179,
   shininess: 7.00,
   waveHeight: 14.00,
@@ -62,6 +62,7 @@ const plistID = config.ytps;
 const subCount = document.querySelector('.subCount');
 var vidTitle = document.getElementsByClassName('vidTitle');
 var thumb = document.getElementsByClassName('thumbs');
+var vlink = document.getElementsByClassName('vlink');
 
 let getSubscribers = () => {
     fetch(`https://www.googleapis.com/youtube/v3/channels?part=statistics&id=${channelID}&key=${apiKey}`)
@@ -75,7 +76,7 @@ let getSubscribers = () => {
 }
 
 let getVideos = () => {
-  fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${plistID}&maxResults=4&key=${apiKey}`)
+  fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${plistID}&maxResults=6&key=${apiKey}`)
         .then(response => {
             return response.json();
         })
@@ -84,6 +85,7 @@ let getVideos = () => {
           for(let i = 0; thumb.length; i++){
             thumb[i].src=data["items"][i].snippet.thumbnails.high.url;
             vidTitle[i].innerHTML=data["items"][i].snippet.title;
+            vlink[i].href='https://youtu.be/'+data["items"][i].snippet.resourceId.videoId;
           }
         })
 }
