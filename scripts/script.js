@@ -39,21 +39,21 @@ for (var i = 0; i < navLinks.length; i++) {
   });
 }
 
-VANTA.WAVES({
-  el: "#Home",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 0.65,
-  scaleMobile: 2.0,
-  color: 0x003179,
-  shininess: 7.00,
-  waveHeight: 14.00,
-  waveSpeed: 1.50,
-  zoom: 0.65
-});
+// VANTA.WAVES({
+//   el: "#Home",
+//   mouseControls: true,
+//   touchControls: true,
+//   gyroControls: false,
+//   minHeight: 200.00,
+//   minWidth: 200.00,
+//   scale: 0.65,
+//   scaleMobile: 0.65,
+//   color: 0x003179,
+//   shininess: 7.00,
+//   waveHeight: 14.00,
+//   waveSpeed: 1.50,
+//   zoom: 0.65
+// });
 
 //Fetch Live Subscribers Count and Latest Videos
 let apiKey = config.ytda;
@@ -82,7 +82,7 @@ let getVideos = () => {
         })
         .then(data => {
           console.log(data);
-          for(let i = 0; thumb.length; i++){
+          for(let i = 0; i < thumb.length; i++){
             thumb[i].src=data["items"][i].snippet.thumbnails.high.url;
             vidTitle[i].innerHTML=data["items"][i].snippet.title;
             vlink[i].href='https://youtu.be/'+data["items"][i].snippet.resourceId.videoId;
