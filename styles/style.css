@@ -59,6 +59,7 @@ nav .header .menu{
 nav .header .menu li{
     margin: 0 8px;
     list-style: none;
+    line-height: 100%;
 }
 
 nav .header .menu a{
@@ -98,6 +99,7 @@ nav.sticky .menu a:active{
 nav .header .media-icons a{
     transition: all 0.3s ease;
     font-size: 20px;
+    line-height: 100%;
     color: #fff;
     margin: 0 6px;
 }
@@ -142,6 +144,11 @@ nav .menu-btn,
 
 nav.sticky .menu-btn{
     color: #0078d7;
+    top: 35px;
+}
+
+nav.sticky .header .menu .cancel-btn{
+    top: 35px;
 }
 
 .header .menu .menu-btn{
@@ -239,8 +246,9 @@ section{
 .more {
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    background-color: #0078d7;
+    background-image: linear-gradient(#0088ff, #0064b6);
     color: #fff;
+    cursor: pointer;
     border: none;
     font-size: 50px;
     font-family: 'Dongle';
@@ -287,8 +295,9 @@ section{
 .btt {
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
-    background-color: #fff;
+    background-image: linear-gradient(#ffffff, #cccccc);
     color: #0078d7;
+    cursor: pointer;
     border: none;
     font-size: 60px;
     font-family: 'Dongle';
@@ -304,6 +313,41 @@ section{
 
 .about{
     background-image: linear-gradient(#008fff44, #0078d744);
+    width: 100%;
+}
+
+.aboutwrap{
+    display: flex;
+    justify-content: end;
+    width: inherit;
+    padding-right: 25px;
+}
+
+.mewrap{
+    height: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.me, .gadgets{
+    position: absolute;
+    max-width: 98%;
+    max-height: 98%;
+    right: 5%;
+    bottom: 0;
+    filter: drop-shadow(0 12px 16px #40404077);
+}
+
+.gadgets{
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+    0% { transform: translate(0,  0); }
+    50%  { transform: translate(0, -5%); }
+    100%   { transform: translate(0, -0px); } 
+    
 }
 
 @media (max-width: 900px) {
