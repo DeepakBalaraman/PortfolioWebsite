@@ -60,6 +60,9 @@ let apiKey = config.ytda;
 const channelID = config.ytid;
 const plistID = config.ytps;
 const subCount = document.querySelector('.subCount');
+const viewCount = document.querySelector('.viewCount');
+var sCounter, vCounter, start = 0, start2 = 0, timeout, intout;
+var flag = true;
 var vidTitle = document.getElementsByClassName('vidTitle');
 var thumb = document.getElementsByClassName('thumbs');
 var vlink = document.getElementsByClassName('vlink');
@@ -71,7 +74,9 @@ let getSubscribers = () => {
         })
         .then(data => {
             console.log(data);
-            subCount.innerHTML =  data["items"][0].statistics.subscriberCount;
+
+            sCounter =  Math.floor(data["items"][0].statistics.subscriberCount/10)*10;
+            vCounter = Math.floor(data["items"][0].statistics.viewCount/100)*100;
         })
 }
 
@@ -90,5 +95,35 @@ let getVideos = () => {
         })
 }
 
+let countItUp = () => {
+  subCount.innerHTML = parseInt(sCounter);
+  viewCount.innerHTML = parseInt(vCounter);
+  $('.subCount').each(function(){
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now){
+            $(this).text(Math.ceil(now) + '+');
+        }
+    });
+  });
+
+  $('.viewCount').each(function(){
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 2000,
+        easing: 'swing',
+        step: function (now){
+            $(this).text(Math.ceil(now) + '+');
+        }
+    });
+  });
+  
+}
+
 getSubscribers();
 getVideos();
+timeout = setTimeout(countItUp, 1000);
