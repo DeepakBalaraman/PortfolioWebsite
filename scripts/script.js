@@ -39,29 +39,13 @@ for (var i = 0; i < navLinks.length; i++) {
   });
 }
 
-// VANTA.WAVES({
-//   el: "#Home",
-//   mouseControls: true,
-//   touchControls: true,
-//   gyroControls: false,
-//   minHeight: 200.00,
-//   minWidth: 200.00,
-//   scale: 0.65,
-//   scaleMobile: 0.65,
-//   color: 0x003179,
-//   shininess: 7.00,
-//   waveHeight: 14.00,
-//   waveSpeed: 1.50,
-//   zoom: 0.65
-// });
-
 //Fetch Live Subscribers Count and Latest Videos
 let apiKey = config.ytda;
 const channelID = config.ytid;
 const plistID = config.ytps;
 const subCount = document.querySelector('.subCount');
 const viewCount = document.querySelector('.viewCount');
-var sCounter, vCounter, start = 0, start2 = 0, timeout, intout;
+var sCounter, vCounter, timeout;
 var flag = true;
 var vidTitle = document.getElementsByClassName('vidTitle');
 var thumb = document.getElementsByClassName('thumbs');

@@ -26,7 +26,7 @@ nav{
 
 nav.sticky{
     background: #fff;
-    padding: 10px 0;
+    padding: 5px 0;
     width: 90%;
     top: 2%;
     margin-left: 5%;
@@ -52,6 +52,13 @@ nav .header .logo a{
 
 nav.sticky .header .logo a{
     color: #000;
+    font-size: 55px;
+    line-height: 105%;
+}
+
+nav.sticky .header .logo a svg{
+    width: 50px;
+    height: 50px;
 }
 
 nav .header .logo a svg .logopath{
@@ -105,12 +112,13 @@ nav .header .menu a:hover{
 
 nav.sticky .menu a{
     color: #000;
+    font-size: 30px;
 }
 
 nav.sticky .menu a:hover{
     color: #0078d7;
     filter: drop-shadow(0 12px 16px #40404077);
-    font-size: 45px;
+    font-size: 40px;
 }
 
 nav.sticky .hoverline:after{
@@ -124,7 +132,7 @@ nav .header .menu a:active{
 
 nav.sticky .menu a:active{
     filter: drop-shadow(0 1px 1px #40404077);
-    font-size: 25px;
+    font-size: 20px;
 }
 
 nav .header .media-icons a{
@@ -140,7 +148,7 @@ nav.sticky .media-icons a{
 }
 
 nav .header .media-icons a:hover{
-    color: #bee2ff;;
+    color: #bee2ff;
     filter: drop-shadow(0 12px 16px #40404077);
     font-size: 30px;
 }
@@ -226,6 +234,10 @@ section{
     width: 100%;
 }
 
+.mobilewrap{
+    display: none;
+}
+
 .sectiontitle{
     font-size:80px;
     padding-left: 20px;
@@ -279,6 +291,7 @@ section{
 
 .wraptitle{
     display: flex;
+    transition: all 0.3s ease;
 }
 
 .wraptitle div{
@@ -287,6 +300,14 @@ section{
     width: 0;
     text-align: center;
     line-height: 1;
+}
+
+.cropper:hover + .wraptitle{
+    padding-top: 10px;
+}
+
+.cropper:active + .wraptitle{
+    padding-top: 0px;
 }
 
 .more:hover {
@@ -353,10 +374,22 @@ section{
     color: #fff;
 }
 
-.join{
+.joinwrap{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding-top: 50px;
+    width: 100%;
+}
+
+.join{
+    flex: 0 0 50%;
+    max-width: 100%;
+    padding: 10px;
     color: #fff;
-    font-size: 40px;
+    font-size: 70px;
 }
 
 .btt:hover {
@@ -390,6 +423,8 @@ section{
     text-align: center;
     border-radius: 10px;
     margin-top: 30px;
+    flex: 0 0 50%;
+    max-width: 100%;
 }
 
 .about{
@@ -432,14 +467,15 @@ section{
 }
 
 
-@media (max-width: 970px) {
+@media (max-width: 900px) {
     nav .header{
       width: 90%;
       padding: 0 0;
     }
 
     nav.sticky{
-        padding: 0 0;
+        padding: 2px 0;
+        border-radius: 12px;
     }
 
     nav .header .menu{
@@ -474,8 +510,8 @@ section{
     }
 
     nav .header .logo a svg{
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
     }
 
     nav .header .menu a:hover{
@@ -500,7 +536,7 @@ section{
 
     nav.sticky .menu-btn,
     .header .menu .cancel-btn{
-        top: 10px;
+        top: 9px;
     }
 
     nav .menu-btn:hover , 
@@ -515,17 +551,71 @@ section{
 
     nav.sticky .header .logo{
         display: flex;
-        line-height: 100%;
+        align-items: center;
     }
     
     nav.sticky .header .logo a{
-        font-size: 40px;
+        font-size: 35px;
     }
     
-    nav.sticky .logo a svg{
+    nav.sticky .header .logo a svg{
         width: 35px;
         height: 35px;
-        
+    }
+
+    .subCount, .viewCount{
+        font-size: 100px;
+    }
+    
+    .subs, .views{
+        margin-top: -50px;
+        font-size: 33px;
+    }
+
+    .channelwrap{
+        display: none;
+    }
+
+    .mobilewrap{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: right;
+        width: 35%;
+        float: right;
+        padding-top: 40px;
+    }
+    
+    .mobilecontainer{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 10px;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 15px;
+        margin-right: 50px;
+    }
+    
+    .mobilepreview{
+        width: 100%;
+    }
+
+    .joinwrap{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: left;
+        padding-top: 50px;
+        width: 100%;
+    }
+    
+    .join{
+        flex: 0 0 50%;
+        max-width: 100%;
+        padding: 10px;
+        color: #fff;
+        font-size: 40px;
     }
 
     .btt{
@@ -541,5 +631,18 @@ section{
     .sectiontitle{
         font-size: 40px;
         padding: 10px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .subCount, .viewCount{
+        font-size: 50px;
+    }
+
+    .subs, .views{
+        font-size: 16px;
+        margin-top: -25px;
     }
 }
