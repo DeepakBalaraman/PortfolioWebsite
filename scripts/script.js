@@ -7,36 +7,6 @@ window.onscroll = function() {
   }else{
     nav.classList.remove("sticky");
   }
-
-}
-
-//Show or Hide menu icon upon menu open/close
-let body = document.querySelector("body");
-let header = document.querySelector(".header");
-let menuBtn = document.querySelector(".menu-btn");
-let cancelBtn = document.querySelector(".cancel-btn");
-menuBtn.onclick = function(){
-  header.classList.add("active");
-  menuBtn.style.opacity = "0";
-  menuBtn.style.pointerEvents = "none";
-  body.style.overflow = "hidden";
-}
-cancelBtn.onclick = function(){
-  header.classList.remove("active");
-  menuBtn.style.opacity = "1";
-  menuBtn.style.pointerEvents = "auto";
-  body.style.overflow = "auto";
-}
-
-//Close menu upon selecting an option
-let navLinks = document.querySelectorAll(".menu li a");
-for (var i = 0; i < navLinks.length; i++) {
-  navLinks[i].addEventListener("click" , function() {
-    header.classList.remove("active");
-    menuBtn.style.opacity = "1";
-    menuBtn.style.pointerEvents = "auto";
-    body.style.overflow = "auto";
-  });
 }
 
 //Fetch Live Subscribers Count and Latest Videos
