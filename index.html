@@ -14,7 +14,7 @@
     <script src="scripts/config.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <nav>
@@ -48,16 +48,60 @@
           </div>
 
         <ul class="menu">
-          <li><a class="hoverline" href="#Home"><i class="fas fa-home"></i><div class="menulabel">Home</div></a></li>
-          <li><a class="hoverline" href="#About"><i class="fas fa-id-card"></i><div class="menulabel">About</div></a></li>
-          <li><a class="hoverline" href="#Videos"><i class="fas fa-film"></i><div class="menulabel">Videos</div></a></li>
-          <li><a class="hoverline" href="#Contact"><i class="fas fa-envelope-open-text"></i><div class="menulabel">Contact</div></a></li>
+          <li>
+            <a class="hoverline" href="#Home">
+              <lord-icon
+                  class="fas"
+                  id="homeicon"
+                  src="https://cdn.lordicon.com/hjbsbdhw.json"
+                  trigger="click"
+                  colors="primary:#888888,secondary:#008fff,tertiary:#888888,quaternary:#ffffff">
+              </lord-icon>
+              <span class="menulabel">Home</span>
+            </a>
+          </li>
+          <li>
+            <a class="hoverline" href="#About">
+              <lord-icon
+                  class="fas"
+                  id="abouticon"
+                  src="https://cdn.lordicon.com/jnlncdtk.json"
+                  trigger="click"
+                  colors="primary:#ffffff,secondary:#000000,tertiary:#008fff,quaternary:#f3c3ba,quinary:#008fff">
+              </lord-icon>
+              <span class="menulabel">About</span>
+            </a>
+          </li>
+          <li>
+            <a class="hoverline" href="#Videos">
+              <lord-icon
+                  class="fas"
+                  id="videoicon"
+                  src="https://cdn.lordicon.com/ytdpzbrl.json"
+                  trigger="click"
+                  colors="primary:#ffffff,secondary:#0078d7,tertiary:#008fff">
+              </lord-icon>
+              <span class="menulabel">Videos</span>
+            </a>
+          </li>
+          <li>
+            <a class="hoverline" href="#Contact">
+              <lord-icon
+                  class="fas"
+                  id="contacticon"
+                  src="https://cdn.lordicon.com/rfbqeber.json"
+                  trigger="click"
+                  colors="primary:#888888,secondary:#ffffff,teritary:#008fff">
+              </lord-icon>
+              <span class="menulabel">Contact</span>
+            </a>
+          </li>
         </ul>
         <div class="media-icons">
-          <a href="https://youtube.com/ExultTechTV"><i class="fab fa-youtube"></i></a>
-          <a href="https://twitter.com/ExultTechTV"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com/ExultTechTV"><i class="fab fa-instagram"></i></a>
-          <a href="https://facebook.com/ExultTechTV"><i class="fab fa-facebook"></i></a>
+          <a href="https://youtube.com/ExultTechTV"><div id="yticon" class="mediaicon"></div></a>
+          <a href="https://twitter.com/ExultTechTV"><div id="twicon" class="mediaicon"></div></a>
+          <a href="https://instagram.com/ExultTechTV"><div id="igicon" class="mediaicon"></div></a>
+          <a href="https://facebook.com/ExultTechTV"><div id="fbicon" class="mediaicon"></div></a>
         </div>
       </div>
     </nav>
@@ -91,6 +135,7 @@
     <div height="1000"></div>
     <section class="about" id="About">
       <div class="aboutwrap">
+        <div class="aboutme"><div class="myname">Hi there, I'm Deepak</div> A tech 10+10 year old tech nerd who makes videos on the internet alongside pursuing Computer Science and Engineering. I'm an Android Developer and currently learning Web Development.</div>
         <div class="mewrap">
           <img class="gadgets" src="images/gadgets.png" alt="Gadgets">
           <img class="me" src="images/deepak.png" alt="Deepak">
@@ -144,6 +189,7 @@
     <section class="contact" id="Contact">
       
     </section>
+    <script src="https://cdn.lordicon.com/lusqsztk.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>
   </body>
 </html>

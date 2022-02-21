@@ -45,9 +45,9 @@ nav .header{
 
 nav .header .logo a{
     display: flex;
-  	line-height: 100%;
+  	line-height: 115%;
     font-weight: 500;
-    font-size: 75px;
+    font-size: 60px;
     color: #fff;
 }
 
@@ -145,6 +145,11 @@ nav.sticky .menu a:active{
     font-size: 20px;
 }
 
+nav .header .media-icons{
+    position: relative;
+    display: flex;
+}
+
 nav .header .media-icons a{
     transition: all 0.3s ease;
     font-size: 20px;
@@ -153,30 +158,80 @@ nav .header .media-icons a{
     margin: 0 6px;
 }
 
-nav.sticky .media-icons a{
-    color: #000;
+nav .header .media-icons a .mediaicon{
+    width: 35px;
+    height: 35px;
 }
+
+nav .header .media-icons a .mediaicon svg g path{
+    transition: all 0.3s ease;
+}
+
+/* YouTube */
+nav .header .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_5)'] path{
+    fill: #fff !important;
+}
+
+nav.sticky .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_5)'] path{
+    fill: #000 !important;
+}
+
+nav.sticky .media-icons a .mediaicon:hover svg g[clip-path='url(#__lottie_element_5)'] path{
+    fill: #ff0000 !important;
+}
+
+
+/* Twitter */
+nav .header .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_13)'] path{
+    fill: #fff !important;
+}
+
+nav.sticky .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_13)'] path{
+    fill: #000 !important;
+}
+
+nav.sticky .media-icons a .mediaicon:hover svg g[clip-path='url(#__lottie_element_13)'] path{
+    fill: #1da1f2 !important;
+}
+
+/* Instagram */
+nav .header .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_20)'] path{
+    stroke: #fff !important;
+    stroke-width: 20px !important;
+}
+
+nav.sticky .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_20)'] path{
+    stroke: #000 !important;
+}
+
+nav.sticky .media-icons a .mediaicon:hover svg g[clip-path='url(#__lottie_element_20)'] path{
+    stroke: #833ab4 !important;
+}
+
+/* Facebook */
+nav .header .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_34)'] path{
+    fill: #fff !important;
+}
+
+nav.sticky .media-icons a .mediaicon svg g[clip-path='url(#__lottie_element_34)'] path{
+    fill: #000 !important;
+}
+
+nav.sticky .media-icons a .mediaicon:hover svg g[clip-path='url(#__lottie_element_34)'] path{
+    fill: #1877f2 !important;
+}
+
 
 nav .header .media-icons a:hover{
-    color: #bee2ff;
     filter: drop-shadow(0 12px 16px #40404077);
-    font-size: 30px;
-}
+    transform: scale(1.10);
 
-nav.sticky .media-icons a:hover{
-    color: #0078d7;
-    filter: drop-shadow(0 12px 16px #40404077);
-    font-size: 30px;
 }
 
 nav .header .media-icons a:active{
     filter: drop-shadow(0 1px 1px #40404077);
-    font-size: 15px;
-}
-
-nav.sticky .media-icons a:active{
-    filter: drop-shadow(0 1px 1px #40404077);
-    font-size: 15px;
+    transform: scale(0.90);
+    
 }
 
 section{
@@ -349,13 +404,13 @@ section{
 }
 
 .subCount, .viewCount{
-    font-size: 150px;
+    font-size: 125px;
     color: #fff;
 }
 
 .subs, .views{
-    margin-top: -90px;
-    font-size: 50px;
+    margin-top: -80px;
+    font-size: 40px;
     color: #fff;
 }
 
@@ -425,6 +480,14 @@ section{
     padding-right: 25px;
 }
 
+.aboutme{
+    font-size: 35px;
+}
+
+.myname{
+    font-size: 120px;
+}
+
 .mewrap{
     height: 500px;
     width: 100%;
@@ -464,12 +527,8 @@ section{
         border-radius: 12px;
     }
 
-    .header.active .menu{
-        clip-path: circle(1000px at 50% 50%);
-    }
-
     .hoverline:after {
-        top: 130%;
+        display: none;
     }
 
     nav .header .menu a{
@@ -630,11 +689,11 @@ section{
 @media (max-width: 500px) {
 
     .subCount, .viewCount{
-        font-size: 50px;
+        font-size: 60px;
     }
 
     .subs, .views{
-        font-size: 16px;
+        font-size: 18px;
         margin-top: -25px;
     }
 }
