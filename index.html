@@ -135,10 +135,10 @@
     <div height="1000"></div>
     <section class="about" id="About">
       <div class="aboutwrap">
-        <div class="aboutme"><div class="myname">Hi there, I'm Deepak</div> A tech 10+10 year old tech nerd who makes videos on the internet alongside pursuing Computer Science and Engineering. I'm an Android Developer and currently learning Web Development.</div>
+        <div class="aboutme"><span class="greet">Hi there, I'm </span><div class="myname">Deepak</div> A tech 10+10 year old tech nerd who makes videos on the internet alongside pursuing Computer Science and Engineering. I'm an Android Developer and currently learning Web Development.</div>
         <div class="mewrap">
-          <img class="gadgets" src="images/gadgets.png" alt="Gadgets">
           <img class="me" src="images/deepak.png" alt="Deepak">
+          <img class="gadgets" src="images/gadgets.png" alt="Gadgets">
         </div>
       </div>
     </section>
@@ -187,7 +187,55 @@
       </div>
     </section>
     <section class="contact" id="Contact">
-      
+      <div class="sectiontitle">Contact Me</div>
+      <div class="formcontainer">
+        <form action="javascript:alert('Test');">
+          <ul class="formcontents">
+            <li class="formelement">
+              <label class="formlabel" for="email">Email</label>
+              <lord-icon
+                  src="https://cdn.lordicon.com/pdpnqfoe.json"
+                  trigger="click"
+                  target=".formelement"
+                  colors="primary:#008fff,secondary:#ebe6ef"
+                  style="width:50px;height:50px">
+              </lord-icon>
+              <input class="forminput" placeholder="email@example.com" type="email" name="email">
+            </li>
+            <li class="formelement">
+              <label class="formlabel" for="subject">Subject</label>
+              <lord-icon
+                src="https://cdn.lordicon.com/ucwzcdby.json"
+                trigger="click"
+                target=".formelement"
+                colors="primary:#008fff"
+                style="width:50px;height:50px">
+              </lord-icon>
+              <input class="forminput" placeholder="Subject" type="text" name="subject">
+            </li>
+            <li class="formelement">
+              <label class="formlabel" for="message">Message</label>
+              <lord-icon
+                src="https://cdn.lordicon.com/ckatldkn.json"
+                trigger="click"
+                target=".formelement"
+                colors="primary:#646e78,secondary:#008fff,tertiary:#ebe6ef"
+                style="width:50px;height:50px">
+              </lord-icon>
+              <textarea class="forminput" placeholder="Message" type="text" name="message" id="message"></textarea>
+            </li>
+            <li>
+              <input type="submit" class="more" value="Send Message">
+              <lord-icon
+              src="https://assets4.lottiefiles.com/private_files/lf30_o0calpsv.json"
+              trigger="hover"
+              colors="primary:#008fff,secondary:#ebe6ef"
+              style="width:50px;height:50px">
+              </lord-icon>
+            </li>
+          </ul>
+        </form>
+      </div>
     </section>
     <script src="https://cdn.lordicon.com/lusqsztk.js" crossorigin="anonymous"></script>
     <script src="scripts/script.js"></script>

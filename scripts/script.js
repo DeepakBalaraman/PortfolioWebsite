@@ -119,6 +119,7 @@ var animMid = [28, 27, 14, 14];
 for(let i = 0; i < media.length; i++){
     animation[i] = lottie.loadAnimation({
     container: document.getElementById(ids[i]),
+    className: "socialicon",
     path: 'icons/' + media[i] + '.json',
     renderer: 'svg',
     loop: false,
