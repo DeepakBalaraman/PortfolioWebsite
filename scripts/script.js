@@ -147,6 +147,14 @@ function hoverAnimation(i, element){
   });
 }
 
+let sanimwrap = document.getElementById("sentanimbg");
+document.getElementById("formsubmit").onclick = function (){
+  sanimwrap.classList.add("show");
+  setTimeout(function(){
+    sanimwrap.classList.remove("show");
+  }, 1000);
+}
+
 getSubscribers();
 getVideos();
 timeout = setTimeout(countItUp, 1000);

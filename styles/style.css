@@ -384,6 +384,35 @@ section{
     margin-top: 25px;
 }
 
+li #sentanimbg, #sentanim{
+    transition: all 0.5s ease;
+}
+
+li #sentanimbg{
+    visibility: hidden;
+    opacity: 0;
+    width: 75%;
+    height: 75%;
+    background-color: #fff;
+    border-radius: 50px;
+    position: fixed;
+    top: 12.5%;
+    left: 12.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sentanim{
+    width: 50%;
+    height: 50%;
+}
+
+li #sentanimbg.show{
+    visibility: visible;
+    opacity: 1;
+}
+
 .formcontents{
     display: flex;
     flex-direction: column;
@@ -536,7 +565,7 @@ section{
 .me, .gadgets{
     max-width: 98%;
     max-height: 98%;
-    clip-path: circle(50%);
+    border-radius: 100%;
 }
 
 .gadgets{

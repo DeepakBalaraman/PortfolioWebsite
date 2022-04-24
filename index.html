@@ -189,7 +189,7 @@
     <section class="contact" id="Contact">
       <div class="sectiontitle">Contact Me</div>
       <div class="formcontainer">
-        <form action="javascript:alert('Test');">
+        <form name="contactform" method="post" data-netlify="true">
           <ul class="formcontents">
             <li class="formelement">
               <label class="formlabel" for="email">Email</label>
@@ -225,13 +225,16 @@
               <textarea class="forminput" placeholder="Message" type="text" name="message" id="message"></textarea>
             </li>
             <li>
-              <input type="submit" class="more" value="Send Message">
-              <lord-icon
-              src="https://assets4.lottiefiles.com/private_files/lf30_o0calpsv.json"
-              trigger="hover"
-              colors="primary:#008fff,secondary:#ebe6ef"
-              style="width:50px;height:50px">
-              </lord-icon>
+              <button type="submit" id="formsubmit" class="more">Send Message</button>
+              <div id="sentanimbg">
+                <lord-icon
+                  src="https://assets4.lottiefiles.com/private_files/lf30_o0calpsv.json"
+                  trigger="click"
+                  target="li"
+                  id="sentanim"
+                  colors="primary:#008fff,secondary:#ebe6ef">
+                </lord-icon>
+              </div>
             </li>
           </ul>
         </form>
