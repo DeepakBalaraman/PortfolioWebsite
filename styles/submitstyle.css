@@ -1,0 +1,31 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#sentanimbg, #sentanim{
+    transition: all 0.5s ease;
+}
+
+#sentanimbg{
+    width: 75%;
+    height: 75%;
+    background-color: #fff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sentanim{
+    width: 50%;
+    height: 50%;
+}
+
+@media (max-width: 900px) {
+    #sentanimbg{
+        background-color: #000;
+    }
+}
