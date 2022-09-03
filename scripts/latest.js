@@ -4,5 +4,7 @@ fetch(`https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlist
     })
     .then(data => {
         console.log(data);
-        window.location = 'https://youtube.com/watch?v=' + data["items"][0].snippet.resourceId.videoId;
+        let a = document.getElementById('link');
+        a.href = 'https://youtube.com/watch?v=' + data["items"][0].snippet.resourceId.videoId;
+        a.click();
     })
